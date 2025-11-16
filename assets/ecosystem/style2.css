@@ -1,0 +1,382 @@
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #070414;
+}
+
+/* ---------- HERO ---------- */
+
+.eco-hero {
+  padding: 100px 20px 80px;
+  text-align: center;
+}
+
+.eco-hero__inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.eco-hero h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+  background: linear-gradient(90deg, #E59CFF, #9CB2FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.eco-hero p {
+  font-size: 20px;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.eco-hero a {
+  text-decoration: none;
+}
+.breadcrumb {
+  margin-top: 20px;
+  text-align: center;
+  color: #aaa;
+  font-size: 14px;
+}
+.breadcrumb a {
+  color: #9CB2FF;
+  text-decoration: none;
+}
+.breadcrumb span {
+  margin: 0 6px;
+  color: #555;
+}
+
+/* ---------- CATEGORY FILTERS ---------- */
+
+.eco-categories {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0 40px;
+  flex-wrap: wrap;
+}
+
+.eco-categories button {
+  background: transparent;
+  border: 1px solid #9CB2FF;
+  padding: 8px 18px;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.eco-categories button.active,
+.eco-categories button:hover {
+  background: #9CB2FF;
+  color: #000;
+}
+
+
+/* ---------- PROJECT GRID ---------- */
+
+.eco-projects {
+  padding: 40px 20px 80px;
+}
+
+.eco-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 28px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* БАЗА КАРТОК */
+.eco-card {
+  position: relative;
+  padding: 25px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.06);
+  transition: 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.eco-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(255,255,255,0.15);
+}
+
+/* ==== DeFi ==== */
+.eco-card[data-category="defi"] {
+  background: rgba(98, 221, 255, 0.08);
+  border-color: rgba(98, 221, 255, 0.25);
+}
+.eco-card[data-category="defi"]:hover {
+  box-shadow: 0 0 20px rgba(98, 221, 255, 0.4);
+}
+
+/* ==== NFT ==== */
+.eco-card[data-category="nft"] {
+  background: rgba(255, 143, 243, 0.08);
+  border-color: rgba(255, 143, 243, 0.25);
+}
+.eco-card[data-category="nft"]:hover {
+  box-shadow: 0 0 20px rgba(255, 143, 243, 0.4);
+}
+
+/* ==== Gaming ==== */
+.eco-card[data-category="gaming"] {
+  background: rgba(255, 196, 89, 0.08);
+  border-color: rgba(255, 196, 89, 0.25);
+}
+.eco-card[data-category="gaming"]:hover {
+  box-shadow: 0 0 20px rgba(255, 196, 89, 0.4);
+}
+
+/* ==== Tools ==== */
+.eco-card[data-category="tools"] {
+  background: rgba(157, 255, 127, 0.08);
+  border-color: rgba(157, 255, 127, 0.25);
+}
+.eco-card[data-category="tools"]:hover {
+  box-shadow: 0 0 20px rgba(157, 255, 127, 0.4);
+}
+
+/* СТАЕ М'ЯКИМ І НЕЙТРАЛЬНИМ ДЛЯ ALL */
+.eco-card[data-category="all"] {
+  background: rgba(255,255,255,0.05);
+}
+.eco-card::before {
+  content: attr(data-index);
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 4px 9px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #fff;
+}
+
+.eco-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.eco-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  
+}
+
+.eco-card p {
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.eco-card a {
+  color: #9CB2FF;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+
+/* ---------- PARTNERS ---------- */
+
+.partners {
+  padding: 80px 20px 100px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.partners h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.partners-sub {
+  color: white;
+  margin-bottom: 50px;
+  font-size: 18px;
+}
+
+/* GRID */
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 40px;
+}
+
+/* ❗ Без фону, без карток */
+.partner-card {
+text-align: center;
+  transition: 0.3s ease;
+}
+
+/* Зображення більші */
+.partner-card img {
+  width: 150px;
+  height: 150px; /* однакова висота для всіх */
+  object-fit: contain; /* логотипи не спотворюються */
+  display: block;
+  margin: 0 auto 15px auto;
+  padding: 10px;
+  border-radius: 14px;
+  transition: transform .3s ease;
+}
+
+/* Трохи ефекту при наведенні */
+.partner-card:hover img {
+  transform: scale(1.07);
+}
+
+.partner-card p {
+  color: #aaa;
+  font-size: 20px;
+}
+
+
+/* ---------- CTA ---------- */
+
+/* CTA SECTION */
+.eco-cta {
+  text-align: center;
+  padding-top: 140px;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.eco-cta h2 {
+  font-size: 38px;
+  margin-bottom: 15px;
+  background: linear-gradient(90deg, #E59CFF, #9CB2FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.eco-cta p {
+  color: #ccc;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+.eco-cta-img {
+  width: 150%;
+  max-width: none;
+  display: block;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  height: auto;
+}
+
+/* Модальне вікно */
+#projectModal .modal-content {
+  max-width: 480px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+}
+
+.modal-form label {
+  display: block;
+  color: #ccc;
+  margin-bottom: 6px;
+  margin-top: 15px;
+  font-size: 5px;
+}
+
+.modal-form input,
+.modal-form select,
+.modal-form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #333;
+  background: rgba(255,255,255,0.06);
+  color: white;
+  font-size: 15px;
+}
+
+.modal-form textarea {
+  height: 90px;
+  resize: none;
+}
+
+.modal-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+}
+/* Стилі для select у модалці */
+.modal select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.15);
+   background: rgba(255,255,255,0.06);
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  appearance: none; /* ховає системну стрілку */
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* Колір стрілки для select */
+.modal select option {
+  background: #0d0a1a;
+  color: #fff;
+}
+
+/* Ховер */
+.modal select:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+
+
+
+/* ---------- MOBILE FIXES ---------- */
+@media (max-width: 600px) {
+  .partners h2 {
+    font-size: 32px;
+  }
+  .partner-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .eco-hero h1 {
+    font-size: 36px;
+  }
+
+  .eco-categories {
+    gap: 8px;
+  }
+
+  .eco-card img {
+    height: 130px;
+  }
+
+  .partners-row img {
+    width: 95px;
+  }
+
+  .eco-cta h2 {
+    font-size: 32px;
+  }
+}
+

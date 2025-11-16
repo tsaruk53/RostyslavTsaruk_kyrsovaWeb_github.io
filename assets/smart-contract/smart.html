@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Smart Contracts & Tools — NovaChain</title>
+  <meta name="description" content="Інструменти NovaChain для розробників: CLI, SDK, faucet, приклади смарт-контрактів, локальна мережа та гайди.">
+  <meta property="og:title" content="NovaChain Tools">
+  <meta property="og:description" content="Все для розробників NovaChain — CLI, SDK, Faucet, приклади контрактів та інструменти.">
+  <meta property="og:image" content="../images/icons/nova2.png">
+  <link rel="icon" type="image/svg+xml" href="../images/icons/favicon2.svg">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container-lg">
+    <a href="../../index.html" class="logo">
+      <img src="../images/icons/nova2.webp" alt="NovaChain logo">
+      <span>NovaChain</span>
+    </a>
+
+    <nav class="nav">
+      <ul>
+        <li><a href="../../index.html#about">Структура</a></li>
+        <li><a href="../../index.html#tokenomics">Токеноміка</a></li>
+        <li><a href="../../index.html#roadmap">Дорожня карта</a></li>
+        <li><a href="../../index.html#team">Команда</a></li>
+        <li><a href="../../index.html#docs">Docs</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="#" class="login">Вхід</a>
+      <a href="#" class="trial">Приєднатися</a>
+      <button class="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="header-line"></div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="tools-hero" data-aos="flip-right"> 
+  <h1>Smart Contracts & Tools</h1>
+  <p>Як писати, тестувати та деплоїти смарт-контракти у мережі NovaChain.</p>
+
+  <div class="tools-hero-actions">
+    <a href="#quickstart" class="btn--primary">Почати</a>
+    <a href="#sdk" class="btn--outline">SDK</a>
+    <a href="#DevTools" class="btn--outline">DevTools</a>
+  </div>
+</section>
+
+<!-- QUICK START -->
+<section class="quickstart" id="quickstart" data-aos="zoom-in">
+  <h2>Швидкий старт</h2>
+
+  <div class="quick-grid">
+
+    <div class="quick-card">
+      <h3>1. Встанови NovaChain CLI</h3>
+      <pre><code>npm install -g novachain-cli</code></pre>
+    </div>
+
+    <div class="quick-card">
+      <h3>2. Створи проект</h3>
+      <pre><code>novachain init my-dapp</code></pre>
+    </div>
+
+    <div class="quick-card">
+      <h3>3. Деплой контракт</h3>
+      <pre><code>novachain deploy MyContract.sol</code></pre>
+    </div>
+
+  </div>
+</section>
+
+<!-- SDK -->
+<section class="sdk" id="sdk" data-aos="flip-left"> 
+  <h2>SDK</h2>
+
+  <p class="sdk-desc">Легке підключення до NovaChain через JavaScript / TypeScript.</p>
+
+  <pre><code>npm install @novachain/sdk</code></pre>
+
+  <pre><code>
+// Підключення до RPC
+import { Nova } from "@novachain/sdk";
+
+const client = new Nova("https://rpc.testnet.novachain.app");
+
+// Читання балансу
+const bal = await client.getBalance("0x123...");
+console.log(bal);
+</code></pre>
+</section>
+
+<!-- FAUCET -->
+<section class="faucet" id="faucet" data-aos="fade-right">
+  <h2>Testnet Faucet</h2>
+
+  <p class="faucet-desc">Отримай тестові токени NVC для розробки.</p>
+
+  <form class="faucet-form">
+    <input type="text" placeholder="Введіть адресу гаманця" required>
+    <button class="btn--primary">Отримати NVC</button>
+  </form>
+
+  <p class="faucet-hint">Працює тільки для testnet NovaChain.</p>
+</section>
+
+<!-- CONTRACT EXAMPLES -->
+<section class="contracts" data-aos="fade-left">
+  <h2>Приклади смарт-контрактів</h2>
+
+  <div class="contract-block">
+    <h3>Storage.sol</h3>
+    <pre><code>
+pragma solidity ^0.8.0;
+
+contract Storage {
+    uint public value;
+
+    function set(uint _v) public {
+        value = _v;
+    }
+}
+    </code></pre>
+  </div>
+
+  <div class="contract-block">
+    <h3>Token.sol</h3>
+    <pre><code>
+pragma solidity ^0.8.0;
+
+contract Token {
+    mapping(address => uint) public balance;
+
+    function mint(address to, uint amount) public {
+        balance[to] += amount;
+    }
+}
+    </code></pre>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section class="devtools-section" id="DevTools" data-aos="zoom-out">
+  <div class="devtools-wrapper">
+
+    <h2 class="devtools-title">Dev Tools</h2>
+
+    <div class="devtools-grid">
+
+      <!-- Localnet -->
+      <div class="devtool-card">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/gnubash.svg" alt="Localnet">
+        <h3>Localnet</h3>
+        <p>Запускай локальний тестовий вузол NovaChain за секунди.</p>
+      </div>
+
+      <!-- Contract Inspector -->
+      <div class="devtool-card">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/visualstudiocode.svg" alt="Contract Inspector">
+        <h3>Contract Inspector</h3>
+        <p>Переглядай структуру контрактів, байткод та сигнатури функцій.</p>
+      </div>
+
+      <!-- RPC Explorer -->
+      <div class="devtool-card">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/postman.svg" alt="RPC Explorer">
+        <h3>RPC Explorer</h3>
+        <p>Тестуй RPC виклики та взаємодію з мережею прямо в браузері.</p>
+      </div>
+
+      <!-- Gas Profiler -->
+      <div class="devtool-card center-card">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/lightning.svg" alt="Gas Profiler">
+        <h3>Gas Profiler</h3>
+        <p>Аналізуй газ, оптимізуй контракти та зменшуй витрати.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="docs-faq" data-aos="fade-left">
+  <h2>FAQ</h2>
+
+  <div class="faq-item">
+    <h3>Чи сумісна NovaChain з Solidity?</h3>
+    <p>Так, мережа повністю підтримує EVM.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Де брати тестові NVC?</h3>
+    <p>Через Faucet або CLI командою <code>novachain faucet</code>.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Чи є локальна мережа?</h3>
+    <p>Так, локальний нод запускається через <code>novachain localnet</code>.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <img src="../images/icons/nova2.webp" alt="Logo">
+          <span>NovaChain</span>
+        </div>
+        <div class="footer__social">
+          <img src="../images/icons/discord-icon-svgrepo-com.svg" alt="Discord">
+          <img src="../images/twitter_x_new_logo_x_round_circle_blue_icon_256074.svg" alt="Twitter">
+        </div>
+      </div>
+
+      <div class="footer__links">
+        <div class="footer__column">
+          <h3>Проєкт</h3>
+          <ul>
+            <li><a href="#features">Переваги</a></li>
+            <li><a href="#tokenomics">Tokenomics</a></li>
+            <li><a href="#roadmap">Roadmap</a></li>
+            <li><a href="#team">Команда</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h3>Спільнота</h3>
+          <ul>
+            <li><a href="#">Telegram</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">GitHub</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h3>Ресурси</h3>
+          <ul>
+            <li><a href="#docs">Документація</a></li>
+            <li><a href="#">Контакти</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <hr class="footer__divider">
+
+    <div class="footer__middle">
+      <div class="footer__text">
+        <h3>Підписка на новини</h3>
+      </div>
+      <div class="footer__subscribe">
+        <input type="email" placeholder="Ваша пошта" class="footer__input">
+        <button class="footer__btn">Підписатися</button>
+      </div>
+    </div>
+
+    <hr class="footer__divider">
+
+    <div class="footer__bottom">
+      <p class="footer__copy-left">Privacy Policy  ·  Terms of Conditions</p>
+      <p class="footer__copy-right">© NovaChain</p>
+    </div>
+  </footer>
+
+<!-- MODALS -->
+<div class="modal-overlay" id="modal-overlay"></div>
+
+<div class="modal" id="login-modal">
+  <div class="modal__content">
+    <button class="modal__close" data-close>&times;</button>
+    <h2>Вхід</h2>
+    <form>
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Пароль">
+      <button class="btn--primary">Увійти</button>
+    </form>
+  </div>
+</div>
+
+<div class="modal" id="join-modal">
+  <div class="modal__content">
+    <button class="modal__close" data-close>&times;</button>
+    <h2>Приєднатися</h2>
+    <form>
+      <input type="text" placeholder="Ім'я">
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Пароль">
+      <button class="btn--primary">Створити акаунт</button>
+    </form>
+  </div>
+</div>
+
+<script src="../../script.js"></script>
+<script src="script4.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    offset: 120,
+    once: true
+  });
+</script>
+
+
+</body>
+</html>

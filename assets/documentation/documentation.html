@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Документація — NovaChain</title>
+  <meta name="description" content="Документація NovaChain — SDK, API, смарт-контракти, CLI та довідники для розробників.">
+  <meta property="og:title" content="Документація NovaChain">
+  <meta property="og:description" content="Гайди, API та SDK для роботи з блокчейном NovaChain.">
+  <meta property="og:image" content="../images/icons/nova2.png">
+  <link rel="icon" type="image/svg+xml" href="../images/icons/favicon2.svg">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="style1.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="container-lg">
+    <a href="../../index.html" class="logo">
+      <img src="../images/icons/nova2.webp" alt="NovaChain logo">
+      <span>NovaChain</span>
+    </a>
+
+    <nav class="nav">
+  <ul>
+        <li><a href="../../index.html#about">Структура</a></li>
+        <li><a href="../../index.html#tokenomics">Токеноміка</a></li>
+        <li><a href="../../index.html#roadmap">Дорожня карта</a></li>
+        <li><a href="../../index.html#team">Команда</a></li>
+        <li><a href="../../index.html#docs">Docs</a></li>
+  </ul>
+</nav>
+
+    <div class="header-actions">
+      <a href="#" class="login">Вхід</a>
+      <a href="#" class="trial">Приєднатися</a>
+      <button class="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="header-line"></div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="docs-hero" data-aos="zoom-in">
+  <div class="docs-hero__inner">
+    <h1>Документація NovaChain</h1>
+    <p>Усе, що потрібно для створення та запуску децентралізованих застосунків: SDK, API, приклади, CLI та смарт-контракти.</p>
+
+    <div class="docs-hero__actions">
+      <a href="#" class="btn--primary">Почати</a>
+      <a href="#" class="btn--outline">SDK</a>
+      <a href="#" class="btn--outline">API Reference</a>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN SECTIONS -->
+<section class="docs-sections" data-aos="fade-down">
+  <h2>Основні розділи</h2>
+
+  <div class="docs-sections__grid">
+
+    <div class="docs-card">
+      <h3>Смарт-контракти</h3>
+      <p>Приклади контрактів, структура проєкту, механізм виконання та найкращі практики розробки на NovaChain.</p>
+      <a href="#">Переглянути →</a>
+    </div>
+
+    <div class="docs-card">
+      <h3>Node та CLI</h3>
+      <p>Гайд по встановленню node, робота з CLI, деплой, компіляція та взаємодія з мережею.</p>
+      <a href="#">Переглянути →</a>
+    </div>
+
+    <div class="docs-card">
+      <h3>REST / RPC API</h3>
+      <p>API-довідник, точки доступу, приклади запитів та інтеграція з бекендом dApp.</p>
+      <a href="#">Переглянути →</a>
+    </div>
+
+  </div>
+</section>
+<section class="docs-quickstart" data-aos="flip-left">
+  <h2>Швидкий старт</h2>
+
+  <div class="qs-steps">
+
+    <div class="qs-step">
+      <h3>1. Встановлення NovaChain CLI</h3>
+      <p>Установіть офіційний CLI інструмент для роботи з контрактами та мережею.</p>
+      <code>npm install -g novachain-cli</code>
+    </div>
+
+    <div class="qs-step">
+      <h3>2. Ініціалізація проєкту</h3>
+      <p>Створіть новий стандартний шаблон проєкту для швидкого старту.</p>
+      <code>novachain init my-dapp</code>
+    </div>
+
+    <div class="qs-step">
+      <h3>3. Деплой контракту</h3>
+      <p>Після компіляції відправте контракт у testnet.</p>
+      <code>novachain deploy --network testnet</code>
+    </div>
+
+  </div>
+</section>
+
+<section class="docs-resources" data-aos="fade-right">
+  <h2>Ресурси для розробників</h2>
+
+  <div class="resources-grid">
+
+    <div class="res-item">
+      <h3>GitHub</h3>
+      <p>Відкритий код SDK, CLI та прикладів контрактів.</p>
+      <a href="#" class="res-link">Перейти →</a>
+    </div>
+
+    <div class="res-item">
+      <h3>API Explorer</h3>
+      <p>Тестуйте запити до RPC / REST API у браузері.</p>
+      <a href="#" class="res-link">Перейти →</a>
+    </div>
+
+    <div class="res-item">
+      <h3>SDK (npm)</h3>
+      <p>Бібліотека для інтеграції dApp з NovaChain.</p>
+      <a href="#" class="res-link">Перейти →</a>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FAQ -->
+<section class="docs-faq" data-aos="fade-up">
+  <h2>FAQ для розробників</h2>
+
+  <div class="faq-item">
+    <h3>Які мови підтримує NovaChain?</h3>
+    <p>Основна мова смарт-контрактів — TypeScript-based синтаксис, адаптований для виконання у VM NovaChain.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Як деплоїти смарт-контракт?</h3>
+    <p>За допомогою CLI: <code>novachain deploy</code>. Контракт компілюється у байткод і надсилається в мережу.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Чи є тестова мережа?</h3>
+    <p>Так, існує testnet, доступний через RPC: <code>https://rpc.testnet.novachain.app</code>.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Яка модель оплати газу?</h3>
+    <p>NovaChain використовує адаптивний gas-mechanism, залежно від складності операції та навантаження мережі.</p>
+  </div>
+
+</section>
+
+</main>
+
+<footer class="footer" data-aos="zoom-out">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <img src="../images/icons/nova2.webp" alt="Logo">
+          <span>NovaChain</span>
+        </div>
+        <div class="footer__social">
+          <img src="../images/icons/discord-icon-svgrepo-com.svg" alt="Discord">
+          <img src="../images/twitter_x_new_logo_x_round_circle_blue_icon_256074.svg" alt="Twitter">
+        </div>
+      </div>
+
+      <div class="footer__links">
+        <div class="footer__column">
+          <h3>Проєкт</h3>
+          <ul>
+            <li><a href="#features">Переваги</a></li>
+            <li><a href="#tokenomics">Tokenomics</a></li>
+            <li><a href="#roadmap">Roadmap</a></li>
+            <li><a href="#team">Команда</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h3>Спільнота</h3>
+          <ul>
+            <li><a href="#">Telegram</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">GitHub</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h3>Ресурси</h3>
+          <ul>
+            <li><a href="#docs">Документація</a></li>
+            <li><a href="#">Контакти</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <hr class="footer__divider">
+
+    <div class="footer__middle">
+      <div class="footer__text">
+        <h3>Підписка на новини</h3>
+      </div>
+      <div class="footer__subscribe">
+        <input type="email" placeholder="Ваша пошта" class="footer__input">
+        <button class="footer__btn">Підписатися</button>
+      </div>
+    </div>
+
+    <hr class="footer__divider">
+
+    <div class="footer__bottom">
+      <p class="footer__copy-left">Privacy Policy  ·  Terms of Conditions</p>
+      <p class="footer__copy-right">© NovaChain</p>
+    </div>
+  </footer>
+
+<!-- ===== MODALS ===== -->
+<div class="modal-overlay" id="modal-overlay"></div>
+
+<!-- Modal: Вхід -->
+<div class="modal" id="login-modal">
+  <div class="modal__content">
+    <button class="modal__close" data-close>&times;</button>
+    <h2>Вхід</h2>
+    <form>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Пароль" required>
+       <div class="forgot-password">
+        <a href="#">Забули пароль?</a>
+      </div>
+      <button type="submit" class="btn--primary">Увійти</button>
+    </form>
+  </div>
+</div>
+
+<!-- Modal: Приєднатися -->
+<div class="modal" id="join-modal">
+  <div class="modal__content">
+    <button class="modal__close" data-close>&times;</button>
+    <h2>Приєднатися до NovaChain</h2>
+    <form>
+      <input type="text" placeholder="Ім’я" required>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Пароль" required>
+      <button type="submit" class="btn--primary">Приєднатися</button>
+    </form>
+  </div>
+</div>
+<script src="../../script.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    offset: 120,
+    once: true
+  });
+</script>
+
+
+</body>
+</html>

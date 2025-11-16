@@ -1,0 +1,343 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #070414;
+}
+/* HERO */
+.tools-hero {
+  text-align: center;
+  padding: 100px 20px 70px;
+}
+
+.tools-hero h1 {
+  font-size: 48px;
+  background: linear-gradient(90deg, #E59CFF, #9CB2FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tools-hero p {
+  color: #ccc;
+  margin-top: 10px;
+  font-size: 19px;
+}
+
+.tools-hero-actions {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* QUICK START */
+.quickstart {
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.quick-grid {
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.quick-card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.quick-card pre {
+  background: #111;
+  padding: 12px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+/* SDK */
+.sdk {
+  padding: 80px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.sdk pre {
+  background: #111;
+  padding: 15px;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+/* FAUCET */
+.faucet {
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.faucet-form {
+  margin: 20px auto;
+  max-width: 400px;
+  display: flex;
+  gap: 10px;
+}
+
+.faucet-form input {
+  flex: 1;
+}
+
+/* CONTRACTS */
+.contracts {
+  padding: 80px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.contract-block {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+}
+
+.contract-block pre {
+  background: #111;
+  padding: 15px;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+/* TOOLS */
+/* ─────────────────────────── */
+/*   DEVTOOLS SECTION WRAPPER  */
+/* ─────────────────────────── */
+
+.devtools-section {
+  padding: 120px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.devtools-wrapper {
+  width: 100%;
+  max-width: 1100px;       /* ❗ Обмежена ширина */
+  margin: 0 auto;
+  text-align: center;
+  padding: 80px 40px;
+  border-radius: 30px;
+}
+
+/* Title */
+
+.devtools-title {
+  font-size: 38px;
+  margin-bottom: 50px;
+  background: linear-gradient(90deg, #E59CFF, #9CB2FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ─────────────────────────── */
+/*            GRID             */
+/* ─────────────────────────── */
+
+.devtools-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+  justify-items: center;
+  position: relative;
+}
+
+/* центрований 4-й елемент */
+.center-card {
+  grid-column: 2 / 3;  /* стає в центр під 3 першими */
+}
+
+/* ─────────────────────────── */
+/*           CARD              */
+/* ─────────────────────────── */
+
+.devtool-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 30px 25px;
+  width: 100%;
+  max-width: 260px;
+  transition: 0.25s ease;
+}
+
+.devtool-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.devtool-card img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 15px;
+  opacity: 1;
+  filter: brightness(0) invert(1); /* ❗ Робить іконку білою */
+}
+
+
+.devtool-card h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.devtool-card p {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+/* ─────────────────────────── */
+/*         RESPONSIVE          */
+/* ─────────────────────────── */
+
+@media (max-width: 900px) {
+  .devtools-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .center-card {
+    grid-column: 1 / 3;
+    justify-self: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .devtools-grid {
+    grid-template-columns: 1fr;
+  }
+  .center-card {
+    grid-column: auto;
+  }
+}
+
+
+/* --- HERO BUTTONS (CLI / SDK) --- */
+.tools-hero-actions a {
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.btn--outline {
+  border: 1px solid #9CB2FF;
+  color: #fff;
+}
+
+.btn--outline:hover {
+  background: #9CB2FF;
+  color: #000;
+}
+
+
+/* --- Remove scroll inside code blocks in quickstart --- */
+.quick-card pre {
+  overflow-x: hidden;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+
+/* --- Beautiful dark faucet input --- */
+.faucet-form input {
+  background: #111;
+  border: 1px solid #333;
+  padding: 12px;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.faucet-form input:focus {
+  outline: none;
+  border-color: #9CB2FF;
+}
+
+.faucet {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.faucet h2 {
+  font-size: 32px;
+  background: linear-gradient(90deg, #E59CFF, #9CB2FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.faucet-desc {
+  color: #ccc;
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+.faucet-hint {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #999;
+}
+
+
+/* FAQ */
+.docs-faq {
+  padding: 80px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.faq-item {
+  background: rgba(255,255,255,0.06);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #1f1f1f;
+  padding: 12px 18px;
+  border-radius: 8px;
+  border: 1px solid #9CB2FF;
+  color: #fff;
+  animation: fade 0.3s ease;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+/* Центруємо 4-й елемент */
+.center-card {
+  grid-column: 1 / -1;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .devtools-grid {
+    grid-template-columns: 1fr;
+  }
+  .devtool-card:nth-child(4) {
+    grid-column: auto;
+  }
+}
+
+@media(max-width: 320px){
+    .tools-hero-actions{
+        flex-direction: column;
+    }
+}
+@media(max-width: 370px){
+    .faucet-form{
+        flex-direction: column;
+    }
+}

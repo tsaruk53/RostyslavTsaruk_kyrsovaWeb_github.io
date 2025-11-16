@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Сторінку не знайдено</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+  <style>
+   html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+body {
+  background: #030014;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  color: white;
+  text-align: center;
+}
+
+    .error-page {
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .error-page h1 {
+      font-size: 120px;
+      line-height: 1;
+      margin: 0;
+      background: linear-gradient(90deg, #E59CFF, #9CB2FF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .error-page h2 {
+      margin: 0;
+      font-size: 28px;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .error-page p {
+      font-size: 18px;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .error-page a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 28px;
+      border-radius: 32px;
+      text-decoration: none;
+      font-size: 16px;
+      color: #fff;
+      background: linear-gradient(90deg, #E59CFF, #BA9CFF, #9CB2FF);
+      box-shadow: inset 0 -6px 10px rgba(164,143,255,.12);
+      transition: 0.3s;
+    }
+
+    .error-page a:hover {
+      transform: translateY(-3px);
+      opacity: 0.9;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="error-page">
+    <h1>404</h1>
+    <h2>Сторінку не знайдено</h2>
+    <p>Можливо, вона була переміщена або ви ввели неправильну адресу.</p>
+    <a href="/index.html">Повернутися на головну</a>
+  </div>
+</body>
+</html>
