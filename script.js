@@ -32,6 +32,34 @@ function syncMobileActions(){
 }
 
 
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+
+  // Якщо в цій вкладці прелоадер вже був – не показуємо
+  if (sessionStorage.getItem("preloaderShown")) {
+    preloader.style.display = "none";
+    return;
+  }
+
+  // Показуємо 3 секунди (можеш змінити)
+  setTimeout(() => {
+    preloader.classList.add("hide");
+
+    setTimeout(() => {
+      preloader.style.display = "none";
+    }, 1000); // час на плавне зникнення
+
+    sessionStorage.setItem("preloaderShown", "true");
+  }, 2000);
+});
+
+
+
+
+
+
+
+
 burger.addEventListener('click', ()=>{
   burger.classList.toggle('active');
   navList.classList.toggle('open');
@@ -183,6 +211,22 @@ initSwiper();
 window.addEventListener("resize", initSwiper);
 
 
+const scrollBtn = document.getElementById("scrollTopBtn");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    scrollBtn.classList.add("show");
+  } else {
+    scrollBtn.classList.remove("show");
+  }
+});
+
+scrollBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
 
 
 

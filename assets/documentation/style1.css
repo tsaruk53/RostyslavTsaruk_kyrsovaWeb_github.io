@@ -1,3 +1,7 @@
+html, body {
+  overflow-x: hidden;
+}
+
 /* Фікс для шапки */
 .header {
   position: sticky;
@@ -83,6 +87,7 @@ text-decoration: none;
 .docs-card:hover {
   transform: translateY(-5px);
 }
+
 
 
 

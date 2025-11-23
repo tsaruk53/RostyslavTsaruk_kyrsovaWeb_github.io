@@ -1,7 +1,11 @@
 /* ===== БАЗА ===== */
-html {scroll-behavior: smooth; overflow-x: hidden;scrollbar-width: thin;
-  scrollbar-color: #6e5fd0 #070414;}
+* {
+  box-sizing: border-box;
+}
+html {scroll-behavior: smooth;scrollbar-width: thin;
+  scrollbar-color: #6e5fd0 #070414; overflow-x: hidden}
 body{background:rgba(3,0,20,1);color:#fff;font-family:"Inter",Arial,sans-serif;}
+
 #about {scroll-margin-top: 200px;}#tokenomics {scroll-margin-top: 300px;}#roadmap {scroll-margin-top: 200px;}#team {scroll-margin-top: 100px;}#docs {scroll-margin-top: 150px;}
 h1,h2{font-family:"Segoe UI",sans-serif;font-weight:400;text-align:center;background:linear-gradient(180deg,#FFFFFF 0%,rgba(255,255,255,0.7)100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 h1{font-size:72px;line-height:80px;}
@@ -24,6 +28,49 @@ h3{font:400 18px/28px "Inter",sans-serif;text-align:center;color:rgba(239,237,25
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, #6e5fd0, #a06be2);
 }
+
+.preloader-skip #preloader {
+  display: none !important;
+  opacity: 0 !important;
+}
+
+
+#preloader {
+  position: fixed;
+  inset: 0;
+  background: #070414;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+
+  opacity: 1; /* ← ПРЕЛОАДЕР ВИДИМИЙ СПОЧАТКУ */
+  pointer-events: all;
+  transition: opacity 1s ease;
+}
+
+
+/* Плавне зникнення */
+#preloader.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader-logo {
+  width: 220px;
+  animation: softPulse 2.6s infinite ease-in-out;
+}
+
+@keyframes softPulse {
+  0%   { transform: scale(1); opacity: 0.85; }
+  50%  { transform: scale(1.07); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.85; }
+}
+
+
+
+
+
 /* ===== НАВІГАЦІЯ ===== */
 .header{width:100%;height:88px;background:rgba(3,0,20,1);display:flex;flex-direction:column;align-items:center;justify-content:center;position:fixed;z-index:1000;}
 .container-lg{width:1250px;max-width:90%;margin:auto;display:flex;align-items:center;justify-content:space-between;}
@@ -490,6 +537,53 @@ h3{font:400 18px/28px "Inter",sans-serif;text-align:center;color:rgba(239,237,25
 .modal input::placeholder,
 .modal textarea::placeholder {
   color: rgba(255, 255, 255, 0.6);
+}
+
+.scroll-top {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+
+  background: #9CB2FF;
+  color: #000;
+  font-size: 22px;
+  font-weight: 700;
+
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 0 20px rgba(156,178,255,0.4);
+  transition: 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.scroll-top:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(156,178,255,0.6);
+}
+
+.scroll-top.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* мобільна адаптація */
+@media (max-width: 600px) {
+  .scroll-top {
+    right: 20px;
+    bottom: 20px;
+    width: 46px;
+    height: 46px;
+    font-size: 20px;
+  }
 }
 
 

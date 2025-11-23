@@ -149,16 +149,26 @@
 .eco-card::before {
   content: attr(data-index);
   position: absolute;
-  top: 12px;
-  left: 12px;
-  font-size: 16px;
-  font-weight: 600;
-  padding: 4px 9px;
-  border-radius: 8px;
-  background: rgba(255,255,255,0.08);
+  top: 14px;
+  left: 14px;
+
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  background: rgba(255,255,255,0.07);
   border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 10px;
+
   color: #fff;
 }
+
 
 .eco-card img {
   width: 100%;
@@ -169,15 +179,32 @@
 }
 
 .eco-card h3 {
-  font-size: 22px;
-  margin-bottom: 10px;
-  
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  margin: 35px 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  letter-spacing: 0.2px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* максимум 2 рядки */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .eco-card p {
   color: #fff;
-  margin-bottom: 12px;
+  font-size: 18px;
+  line-height: 1.45;
+  font-weight: 500;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* максимум 3 рядки */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
 }
+
 
 .eco-card a {
   color: #9CB2FF;
