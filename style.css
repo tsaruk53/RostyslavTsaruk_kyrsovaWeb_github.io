@@ -1,7 +1,5 @@
 /* ===== БАЗА ===== */
-* {
-  box-sizing: border-box;
-}
+
 html {scroll-behavior: smooth;scrollbar-width: thin;
   scrollbar-color: #6e5fd0 #070414; overflow-x: hidden}
 body{background:rgba(3,0,20,1);color:#fff;font-family:"Inter",Arial,sans-serif;}
