@@ -16,6 +16,7 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="../../style.css">
   <link rel="stylesheet" href="style3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 </head>
 
 <body>
@@ -33,7 +34,7 @@
         <li><a href="../../index.html#tokenomics">Токеноміка</a></li>
         <li><a href="../../index.html#roadmap">Дорожня карта</a></li>
         <li><a href="../../index.html#team">Команда</a></li>
-        <li><a href="../../index.html#docs">Docs</a></li>
+        <li><a href="../../index.html#docs">Документація</a></li>
   </ul>
 </nav>
 
@@ -49,14 +50,13 @@
 </header>
 
 <main>
-<!-- HERO -->
+
 <section class="contact-hero"  data-aos="fade-up">
   <h1>Контакти NovaChain</h1>
   <p>Ми відкриті до співпраці, інтеграцій та нових партнерств.</p>
   <a href="#contact-form" class="btn--primary">Написати нам</a>
 </section>
 
-<!-- CONTACT INFO -->
 <div class="social-icons">
   <a href="https://t.me/your_link" target="_blank">
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/telegram.svg" alt="Telegram">
@@ -75,20 +75,18 @@
   </a>
 </div>
 
-<!-- CONTACT FORM -->
 <section class="contact-form-section" id="contact-form"  data-aos="fade-down">
   <h2>Зв’язатися з нами</h2>
 
   <form class="contact-form">
-    <input type="text" placeholder="Ваше ім’я" required />
-    <input type="email" placeholder="Email" required />
+    <input type="text" placeholder="Ваше ім’я" required>
+    <input type="email" placeholder="Email" required>
     <textarea rows="4" placeholder="Ваше повідомлення" required></textarea>
 
     <button type="submit" class="btn--primary">Відправити</button>
   </form>
 </section>
 
-<!-- CAREERS -->
 <section class="careers"  data-aos="flip-right">
   <h2>Відкриті вакансії</h2>
 
@@ -117,7 +115,7 @@
 
 </main>
 
-<footer class="footer">
+<footer class="footer" data-aos="zoom-in">
     <div class="footer__top">
       <div class="footer__brand">
         <div class="footer__logo">
@@ -125,8 +123,12 @@
           <span>NovaChain</span>
         </div>
         <div class="footer__social">
-          <img src="../images/icons/discord-icon-svgrepo-com.svg" alt="Discord">
+           <a href="https://discord.com">
+            <img src="../images/icons/discord-icon-svgrepo-com.svg" alt="Discord">
+            </a>
+            <a href="https://twitter.com">
           <img src="../images/twitter_x_new_logo_x_round_circle_blue_icon_256074.svg" alt="Twitter">
+        </a>
         </div>
       </div>
 
@@ -134,25 +136,25 @@
         <div class="footer__column">
           <h3>Проєкт</h3>
           <ul>
-            <li><a href="#features">Переваги</a></li>
-            <li><a href="#tokenomics">Tokenomics</a></li>
-            <li><a href="#roadmap">Roadmap</a></li>
-            <li><a href="#team">Команда</a></li>
+            <li><a href="../../index.html#features">Переваги</a></li>
+            <li><a href="../../index.html#tokenomics">Tokenomics</a></li>
+            <li><a href="../../index.html#roadmap">Roadmap</a></li>
+            <li><a href="../../index.html#team">Команда</a></li>
           </ul>
         </div>
         <div class="footer__column">
           <h3>Спільнота</h3>
           <ul>
-            <li><a href="#">Telegram</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">GitHub</a></li>
+            <li><a href="https://t.me/your_link">Telegram</a></li>
+            <li><a href="https://twitter.com/your_link">Twitter</a></li>
+            <li><a href="https://github.com/your_link">GitHub</a></li>
           </ul>
         </div>
         <div class="footer__column">
           <h3>Ресурси</h3>
           <ul>
-            <li><a href="#docs">Документація</a></li>
-            <li><a href="#">Контакти</a></li>
+            <li><a href="../documentation/documentation.html">Документація</a></li>
+            <li><a href="../contacts/contacts.html">Контакти</a></li>
           </ul>
         </div>
       </div>
@@ -178,10 +180,8 @@
     </div>
   </footer>
 
-<!-- ===== MODALS ===== -->
 <div class="modal-overlay" id="modal-overlay"></div>
 
-<!-- Modal: Вхід -->
 <div class="modal" id="login-modal">
   <div class="modal__content">
     <button class="modal__close" data-close>&times;</button>
@@ -197,7 +197,6 @@
   </div>
 </div>
 
-<!-- Modal: Приєднатися -->
 <div class="modal" id="join-modal">
   <div class="modal__content">
     <button class="modal__close" data-close>&times;</button>

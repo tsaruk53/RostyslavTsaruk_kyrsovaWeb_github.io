@@ -1,7 +1,5 @@
-// ===== ДИНАМІЧНИЙ СПИСОК ПРОЄКТІВ =====
-
 const projects = [
-  // DeFi
+  
   {
     title: "NovaSwap",
     category: "defi",
@@ -18,7 +16,7 @@ const projects = [
     description: "Децентралізований стейблкоїн, забезпечений токенами NovaChain."
   },
 
-  // NFT
+  
   {
     title: "NFT Galaxy",
     category: "nft",
@@ -30,7 +28,7 @@ const projects = [
     description: "Платформа для створення генеративних NFT-колекцій."
   },
 
-  // Gaming
+  
   {
     title: "NovaRacers",
     category: "gaming",
@@ -52,7 +50,7 @@ const projects = [
     description: "MMO-метавсесвіт на базі NovaChain з кастомним аватаром."
   },
 
-  // Tools
+  
   {
     title: "NovaScan",
     category: "tools",
@@ -68,7 +66,6 @@ projects.forEach((p, i) => {
   p.number = String(i + 1).padStart(2, "0");
 });
 
-// Рендер карток у .eco-grid
 function renderProjects(filter = "all") {
   const grid = document.querySelector(".eco-grid");
   if (!grid) return;
@@ -81,7 +78,7 @@ function renderProjects(filter = "all") {
     const card = document.createElement("div");
     card.className = `eco-card cat-${project.category}`;
     card.dataset.category = project.category;
-    card.dataset.index = project.number;   // 🔥 головне!
+    card.dataset.index = project.number;   
 
     card.innerHTML = `
       <h3>${project.title}</h3>
@@ -92,8 +89,6 @@ function renderProjects(filter = "all") {
   });
 }
 
-
-// Фільтри кнопками
 function initEcoFilters() {
   const buttons = document.querySelectorAll(".eco-categories button");
   if (!buttons.length) return;
@@ -108,29 +103,24 @@ function initEcoFilters() {
     });
   });
 
-  // стартово показати всі
   renderProjects("all");
 }
 
-// Викликаємо після завантаження DOM
 document.addEventListener("DOMContentLoaded", () => {
   initEcoFilters();
 });
 
-// === FILTER PROJECTS ===
 const filterButtons = document.querySelectorAll(".eco-categories button");
 const projectCards = document.querySelectorAll(".eco-card");
 
 filterButtons.forEach(btn => {
   btn.addEventListener("click", () => {
 
-    // Активна кнопка
     filterButtons.forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
 
     const filter = btn.dataset.filter;
 
-    // Показати / приховати проєкти
     projectCards.forEach(card => {
       if (filter === "all" || card.dataset.category === filter) {
         card.style.display = "block";
@@ -141,20 +131,20 @@ filterButtons.forEach(btn => {
         card.style.transform = "scale(0.95)";
         setTimeout(() => {
           card.style.display = "none";
-        }, 100); // плавне сховання
+        }, 100); 
       }
     });
 
   });
 });
 document.addEventListener('DOMContentLoaded', () => {
-  // ===== ФІЛЬТР КАТЕГОРІЙ =====
+  
   const filterBtns = document.querySelectorAll('.eco-categories button');
   const cards = document.querySelectorAll('.eco-card');
 
   filterBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
-      // активна кнопка
+      
       filterBtns.forEach((b) => b.classList.remove('active'));
       btn.classList.add('active');
 
@@ -171,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ===== МОДАЛКА ДЛЯ "ПРОЄКТІВ" =====
+  
   const overlay = document.getElementById('project-overlay');
   const projectModal = document.getElementById('project-modal');
   const closeBtns = document.querySelectorAll('[data-close]');
@@ -192,7 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape') closeModal();
   });
 
-  // Кнопки, які відкривають модалку: "Створити проєкт" і "Додати свій проєкт"
+ 
   const projectBtns = Array.from(document.querySelectorAll('.btn--primary'))
     .filter((btn) => btn.textContent.includes('проєкт'));
 

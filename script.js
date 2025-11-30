@@ -14,7 +14,7 @@ function syncMobileActions(){
     `;
     navList.appendChild(li);
 
-    // Додаємо слухачі подій для нових кнопок 👇
+   
     li.querySelector('.login').addEventListener('click', e => {
       e.preventDefault();
       closeBurgerMenu();
@@ -35,19 +35,19 @@ function syncMobileActions(){
 window.addEventListener("load", () => {
   const preloader = document.getElementById("preloader");
 
-  // Якщо в цій вкладці прелоадер вже був – не показуємо
+ 
   if (sessionStorage.getItem("preloaderShown")) {
     preloader.style.display = "none";
     return;
   }
 
-  // Показуємо 3 секунди (можеш змінити)
+  
   setTimeout(() => {
     preloader.classList.add("hide");
 
     setTimeout(() => {
       preloader.style.display = "none";
-    }, 1000); // час на плавне зникнення
+    }, 1000); 
 
     sessionStorage.setItem("preloaderShown", "true");
   }, 2000);

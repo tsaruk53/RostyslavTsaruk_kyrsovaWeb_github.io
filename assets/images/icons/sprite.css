@@ -1,0 +1,10 @@
+.bg-SVG_3 { width: 40px; height: 40px; background: url("assets/images/icons/css_sprites.png") -10px -10px; } .bg-SVG_4 { width: 40px; height: 40px; background: url("assets/images/icons/css_sprites.png") -70px -10px; } .bg-SVG_5 { width: 40px; height: 40px; background: url("assets/images/icons/css_sprites.png") -10px -70px; } .bg-SVG_1 { width: 40px; height: 40px; background: url("assets/images/icons/css_sprites.png") -70px -70px; } .bg-SVG_2 { width: 40px; height: 40px; background: url("assets/images/icons/css_sprites.png") -130px -10px; } .bg-SVG { width: 40px; height: 40px; background: url("assets/images/icons/css_sprites.png") -130px -70px; } .bg-SVG_7 { width: 40px; height: 40px; background: url("assets/images/icons/css_sprites.png") -10px -130px; } .bg-SVG_6 { width: 40px; height: 40px; background: url("assets/images/icons/css_sprites.png") -70px -130px; } .bg-download { width: 40px; height: 40px; background: url("assets/images/icons/css_sprites.png") -130px -130px; }
+.icon-speed   { background-position: -10px  -10px; }
+.icon-network { background-position: -70px  -10px; }
+.icon-evm     { background-position: -130px -10px; }
+.icon-sec     { background-position: -10px  -70px; }
+
+.icon-stake   { background-position: -70px  -70px; }
+.icon-bridge  { background-position: -130px -70px; }
+.icon-sdk     { background-position: -10px  -130px; }
+.icon-scan    { background-position: -70px  -130px; }

@@ -1,4 +1,3 @@
-// Показ тосту після faucet
 const form = document.querySelector(".faucet-form");
 
 if (form) {

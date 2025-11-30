@@ -13,29 +13,26 @@
     <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon2.svg">
     <title>NovaChain</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/images/icons/sprite.css">
     <script>
   if (sessionStorage.getItem("preloaderShown")) {
     document.documentElement.classList.add("preloader-skip");
   }
 </script>
-
 </head>
 <body>
 <div id="preloader">
   <img src="assets/images/icons/nova2.webp" class="loader-logo" alt="Loading...">
 </div>
-
-
 <header class="header">
   <div class="container-lg">
-    <a href="#" class="logo">
+    <a href="index.html" class="logo">
       <img src="assets/images/icons/nova2.webp" alt="NovaChain logo">
       <span>NovaChain</span>
     </a>
-
     <nav class="nav">
   <ul>
     <li><a href="#about">Структура</a></li>
@@ -45,7 +42,6 @@
     <li><a href="#docs">Документація</a></li>
   </ul>
 </nav>
-
     <div class="header-actions">
       <a href="#" class="login">Вхід</a>
       <a href="#" class="trial">Приєднатися</a>
@@ -56,65 +52,61 @@
   </div>
   <div class="header-line"></div>
 </header>
-
+<main>
 <section class="hero" data-aos="fade-up">
   <button class="btn-gradient">✨ Тестнет запущено</button>
   <h1>Будуй на NovaChain</h1>
   <h3>Швидкий L1, низькі комісії, EVM-сумісність</h3>
 </section>
-
 <div class="hero-image" data-aos="fade-up">
   <img src="assets/images/bitcoin_main-removebg-preview.webp" alt="NovaChain blockchain illustration">
 </div>
-
-<section class="features-grid" data-aos="fade-left">
-      <div class="grid-row">
-        <div class="feature">
-          <img src="assets/images/icons/SVG.svg" alt="Швидкість">
-          <h4>Швидка фінальність</h4>
-          <h5>&lt; 1 с підтвердження блоку</h5>
-        </div>
-        <div class="feature">
-          <img src="assets/images/icons/SVG_1.svg" alt="Мережа">
-          <h4>Децентралізація</h4>
-          <h5>PoS+BFT з валідаторами по всьому світу</h5>
-        </div>
-        <div class="feature">
-          <img src="assets/images/icons/SVG_2.svg" alt="Сумісність">
-          <h4>EVM-сумісність</h4>
-          <h5>Solidity, MetaMask, знайомі інструменти</h5>
-        </div>
-        <div class="feature">
-          <img src="assets/images/icons/SVG_3.svg" alt="Безпека">
-          <h4>Безпека</h4>
-          <h5>Аудити, апаратні ключі, ролі доступу</h5>
-        </div>
-      </div>
-
-      <div class="grid-row" data-aos="fade-right">
-        <div class="feature">
-          <img src="assets/images/icons/SVG_4.svg" alt="Стейкінг">
-          <h4>Стейкінг і валідатори</h4>
-          <h5>Нагороди за безпеку мережі</h5>
-        </div>
-        <div class="feature">
-          <img src="assets/images/icons/SVG_5.svg" alt="Мости">
-          <h4>Мости та гаманці</h4>
-          <h5>MetaMask, WalletConnect, міжланцюгові мости</h5>
-        </div>
-        <div class="feature">
-          <img src="assets/images/icons/SVG_6.svg" alt="SDK">
-          <h4>Інструменти для девів</h4>
-          <h5>SDK, faucet, шаблони dApp</h5>
-        </div>
-        <div class="feature">
-          <img src="assets/images/icons/SVG_7.svg" alt="Сканер">
-          <h4>Сканер блоків</h4>
-          <h5>Історія транзакцій та статистика</h5>
-        </div>
-      </div>
-    </section>
-
+<section class="features-grid" id="features" data-aos="fade-left">
+  <div class="grid-row">
+    <div class="feature">
+      <div class="sprite-icon icon-speed"></div>
+      <h4>Швидка фінальність</h4>
+      <h5>&lt; 1 с підтвердження блоку</h5>
+    </div>
+    <div class="feature">
+      <div class="sprite-icon icon-network"></div>
+      <h4>Децентралізація</h4>
+      <h5>PoS+BFT з валідаторами по всьому світу</h5>
+    </div>
+    <div class="feature">
+      <div class="sprite-icon icon-evm"></div>
+      <h4>EVM-сумісність</h4>
+      <h5>Solidity, MetaMask, знайомі інструменти</h5>
+    </div>
+    <div class="feature">
+      <div class="sprite-icon icon-sec"></div>
+      <h4>Безпека</h4>
+      <h5>Аудити, апаратні ключі, ролі доступу</h5>
+    </div>
+  </div>
+  <div class="grid-row" data-aos="fade-right">
+    <div class="feature">
+      <div class="sprite-icon icon-stake"></div>
+      <h4>Стейкінг і валідатори</h4>
+      <h5>Нагороди за безпеку мережі</h5>
+    </div>
+    <div class="feature">
+      <div class="sprite-icon icon-bridge"></div>
+      <h4>Мости та гаманці</h4>
+      <h5>MetaMask, WalletConnect, міжланцюгові мости</h5>
+    </div>
+    <div class="feature">
+      <div class="sprite-icon icon-sdk"></div>
+      <h4>Інструменти для девів</h4>
+      <h5>SDK, faucet, шаблони dApp</h5>
+    </div>
+    <div class="feature">
+      <div class="sprite-icon icon-scan"></div>
+      <h4>Сканер блоків</h4>
+      <h5>Історія транзакцій та статистика</h5>
+    </div>
+  </div>
+</section>
 <section class="docs" data-aos="zoom-in">
   <a href="assets/smart-contract/smart.html" class="btn-gradient">
      Смари-Контракти
@@ -125,7 +117,6 @@
     <img src="assets/images/computers.webp" alt="NovaChain documentation preview">
   </div>
 </section>
-
 <section class="showcase"  id="about" data-aos="fade-up">
   <h2 class="showcase-title">Інфраструктура NovaChain</h2>
   <div class="showcase-grid">
@@ -151,14 +142,12 @@
     </div>
   </div>
 </section>
-
 <section class="tokenomics" id="tokenomics" data-aos="fade-up">
   <div class="tokenomics-content">
     <h2>Текономіка: NVC</h2>
     <p class="tokenomics-text">
       Базовий службовий токен мережі: стейкінг, комісії, голосування.
     </p>
-
     <ul class="tokenomics-list">
       <li><span class="token-bar b1"></span> Спільнота (Airdrop, Grants) — <strong>40%</strong></li>
       <li><span class="token-bar b2"></span> Валідатори / Стейкінг — <strong>25%</strong></li>
@@ -166,30 +155,24 @@
       <li><span class="token-bar b4"></span> Команда — <strong>10%</strong></li>
       <li><span class="token-bar b5"></span> Резерв — <strong>5%</strong></li>
     </ul>
-
-   <a href="assets/ecosystem/ecosystem.html" class="btn-gradient" target="_blank">
+   <a href="assets/ecosystem/ecosystem.html" class="btn-gradient">
   Повна токеноміка
 </a>
   </div>
-
   <div class="tokenomics-visual">
     <div class="token-circle"></div>
     <p class="token-caption">Діаграма розподілу NVC</p>
   </div>
 </section>
-
 <section class="security" data-aos="zoom-in">
-  <button class="btn-gradient">🔐 Безпечна архітектура</button>
-
+  <a href="assets/404/404.html" class="btn-gradient">🔐 Безпечна архітектура</a>
   <div class="security-image">
     <img src="assets/images/chato_verh.webp" alt="верхня частина замка">
     <img src="assets/images/chato_main.webp" alt="нижня частина замка">
   </div>
-
   <h2>Безпека рівня протоколу</h2>
   <h3>Аудити, апаратні ключі, баг-баунті та ролі доступу — прозорий і перевірений код для всієї екосистеми NovaChain.</h3>
 </section>
-
 <div class="vertical-connector">
   <svg viewBox="0 0 100 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
     <defs>
@@ -207,40 +190,44 @@
     marker-end="url(#arrow)" opacity="0.9"/>
   </svg>
 </div>
-
-
-
-
 <section class="roadmap-section" id="roadmap" data-aos="fade-right">
   <div class="roadmap-container">
     <h2 class="roadmap-title">Дорожня карта</h2>
     <ol class="roadmap-list">
-      <li><h4>Q1 — Тестнет</h4><p>Запуск публічного тестнету, faucet, документація, перші dApp.</p></li>
-      <li><h4>Q2 — Mainnet</h4><p>Генезис, набір валідаторів, міст до інших мереж.</p></li>
-      <li><h4>Q3 — Екосистема</h4><p>Грантові програми, DEX, NFT-маркетплейс, інтеграції з гаманцями.</p></li>
-      <li><h4>Q4 — Масштабування</h4><p>Шардінг, zk-ролапи, підвищення TPS та стабільності.</p></li>
+      <li class="roadmap-step">
+        <h4 class="roadmap-quarter">Q1 — Тестнет</h4>
+        <p class="roadmap-desc">Запуск публічного тестнету, faucet, документація, перші dApp.</p>
+      </li>
+      <li class="roadmap-step">
+        <h4 class="roadmap-quarter">Q2 — Mainnet</h4>
+        <p class="roadmap-desc">Генезис, набір валідаторів, міст до інших мереж.</p>
+      </li>
+      <li class="roadmap-step">
+        <h4 class="roadmap-quarter">Q3 — Екосистема</h4>
+        <p class="roadmap-desc">Грантові програми, DEX, NFT-маркетплейс, інтеграції з гаманцями.</p>
+      </li>
+      <li class="roadmap-step">
+        <h4 class="roadmap-quarter">Q4 — Масштабування</h4>
+        <p class="roadmap-desc">Шардінг, zk-ролапи, підвищення TPS та стабільності.</p>
+      </li>
     </ol>
   </div>
 </section>
-
 <section class="community" data-aos="fade-up">
   <div class="community__container">
     <img src="assets/images/obrych.webp" alt="Спільнота NovaChain" class="community__image">
 <div class="mots_comunity">
-    <button class="btn-gradient">❤️ Почитати відгуки</button>
-
+    <a href="assets/404/404.html" class="btn-gradient">❤️ Почитати відгуки</a>
     <h2>Спільнота NovaChain</h2>
     <h3>Тут об’єднуються творці, інноватори й мрійники, які будують майбутнє децентралізованого світу разом.</h3>
-
    <div class="community__heart"></div></div>
   </div>
 </section>
-
 <section class="pricing" data-aos="fade-left">
   <div class="pricing__wrapper">
     <img src="assets/images/bottom_shadow.webp" alt="Pricing background" class="pricing__bg">
     <div class="pricing__content">
-      <button class="btn-gradient">Доступність</button>
+      <a href="assets/404/404.html" class="btn-gradient">Доступність</a>
       <h2 class="pricing__title">Один клік — і ти в мережі</h2>
       <div class="pricing__price">
         <span class="pricing__amount">$0</span>
@@ -258,16 +245,14 @@
     </div>
   </div>
 </section>
-
 <section class="team" id="team" data-aos="zoom-in">
      <a href="assets/contacts/contacts.html" class="btn-gradient">
      Зв’язатись з нами ☎️
   </a>
   <h2 class="h2">Команда</h2>
-
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
-      <!-- усі твої слайди -->
+      
       <div class="swiper-slide">
         <img src="assets/images/team1.webp" alt="Царук Ростислав">
         <h4>Царук Ростислав</h4>
@@ -314,8 +299,7 @@
         <p>Frontend Developer</p>
       </div>
     </div>
-
-    <!-- 🔹 Кастомна числова пагінація -->
+    
     <div class="custom-pagination">
       <span class="page active" data-index="0">1</span>
       <span class="page" data-index="1">2</span>
@@ -323,7 +307,6 @@
     </div>
   </div>
 </section>
-
 <section class="documentation" id="docs" data-aos="fade-right">
   <div class="documentation__content">
     <img src="assets/images/documentation.webp" alt="NovaChain Documentation" class="documentation__img">
@@ -336,11 +319,7 @@
     </div>
   </div>
 </section>
-
-
-
-
-  <section class="final" data-aos="fade-up">
+<section class="final" data-aos="fade-up">
   <div class="final__image-wrapper">
     <div class="final__content">
       <div class="final__top-btn">
@@ -352,13 +331,10 @@
         <button class="btn--primary join-trigger">Приєднатись до майбутнього</button>
       </div>
     </div>
-
     <img src="assets/images/blackhole_2.webp" alt="Final section" class="final__image">
   </div>
 </section>
-
-
-
+</main>
 <footer class="footer" data-aos="zoom-in">
     <div class="footer__top">
       <div class="footer__brand">
@@ -367,11 +343,14 @@
           <span>NovaChain</span>
         </div>
         <div class="footer__social">
-          <img src="assets/images/icons/discord-icon-svgrepo-com.svg" alt="Discord">
+           <a href="https://discord.com">
+            <img src="assets/images/icons/discord-icon-svgrepo-com.svg" alt="Discord">
+            </a>
+            <a href="https://twitter.com">
           <img src="assets/images/twitter_x_new_logo_x_round_circle_blue_icon_256074.svg" alt="Twitter">
+        </a>
         </div>
       </div>
-
       <div class="footer__links">
         <div class="footer__column">
           <h3>Проєкт</h3>
@@ -385,23 +364,21 @@
         <div class="footer__column">
           <h3>Спільнота</h3>
           <ul>
-            <li><a href="#">Telegram</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">GitHub</a></li>
+            <li><a href="https://t.me/your_link">Telegram</a></li>
+            <li><a href="https://twitter.com/your_link">Twitter</a></li>
+            <li><a href="https://github.com/your_link">GitHub</a></li>
           </ul>
         </div>
         <div class="footer__column">
           <h3>Ресурси</h3>
           <ul>
             <li><a href="#docs">Документація</a></li>
-            <li><a href="#">Контакти</a></li>
+            <li><a href="assets/contacts/contacts.html">Контакти</a></li>
           </ul>
         </div>
       </div>
     </div>
-
     <hr class="footer__divider">
-
     <div class="footer__middle">
       <div class="footer__text">
         <h3>Підписка на новини</h3>
@@ -411,19 +388,15 @@
         <button class="footer__btn">Підписатися</button>
       </div>
     </div>
-
     <hr class="footer__divider">
-
     <div class="footer__bottom">
       <p class="footer__copy-left">Privacy Policy  ·  Terms of Conditions</p>
       <p class="footer__copy-right">© NovaChain</p>
     </div>
   </footer>
 
-<!-- ===== MODALS ===== -->
 <div class="modal-overlay" id="modal-overlay"></div>
 
-<!-- Modal: Вхід -->
 <div class="modal" id="login-modal">
   <div class="modal__content">
     <button class="modal__close" data-close>&times;</button>
@@ -439,7 +412,6 @@
   </div>
 </div>
 
-<!-- Modal: Приєднатися -->
 <div class="modal" id="join-modal">
   <div class="modal__content">
     <button class="modal__close" data-close>&times;</button>
@@ -453,7 +425,6 @@
   </div>
 </div>
 <button id="scrollTopBtn" class="scroll-top">↑</button>
-
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init({
